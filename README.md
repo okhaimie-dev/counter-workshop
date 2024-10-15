@@ -43,7 +43,7 @@ Initialize the project structure within the cloned repository by using the `Scar
 - Create a new Cairo file under the `src` directory named `counter.cairo`, and add the following starting code:
   ```rust
   #[starknet::contract]
-  pub mod counter_contract {
+  pub mod CounterContract {
       #[storage]
       struct Storage {}
   }
