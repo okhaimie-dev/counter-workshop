@@ -85,6 +85,7 @@ Add `snforge` as a dependency within your `Scarb.toml` file to allow execution o
 
 - In your `Scarb.toml`, declare the `snforge_std` package as your project dependency and enable `casm` contract class generation
 - In your `Scarb.toml`, define a script named `test` to be able to run `snforge test` command
+- In your `Scarb.toml`, set your `edition` to target `2023_11`
 
 ### Verification
 
@@ -99,7 +100,7 @@ scarb test
 - Specify the version of Starknet Foundry that the project currently uses
 - Refer to the [Starknet Foundry Documention](https://foundry-rs.github.io/starknet-foundry/getting-started/first-steps.html#using-snforge-with-existing-scarb-projects) for more information.
 - Refer to the [Scarb Running Scripts Documentation](https://docs.swmansion.com/scarb/docs/reference/scripts.html#running-scripts) for more information.
-- `edition = "2024_07"` is a default configuration from Scarb that targets the July 2024 version of Cairo prelude. However, in our workshop we will work with `2023_01` for simplicity. Refer to the [Prelude Documentation](https://book.cairo-lang.org/appendix-04-cairo-prelude.html#prelude) for more information.
+- `edition = "2024_07"` is a default configuration from Scarb that targets the July 2024 version of Cairo prelude. However, in our workshop we will work with `2023_11` for simplicity. Refer to the [Prelude Documentation](https://book.cairo-lang.org/appendix-04-cairo-prelude.html#prelude) for more information.
 
 ## Step 3
 
