@@ -13,8 +13,8 @@ Clone this repository and choose whether you prefer using Docker to manage globa
 ### Option 1: Without Docker
 
 1. Install `asdf` ([instructions](https://asdf-vm.com/guide/getting-started.html))
-2. Install Scarb `2.8.0` via `asdf` ([instructions](https://docs.swmansion.com/scarb/download.html#install-via-asdf))
-3. Install Starknet Foundry `0.27.0` via `asdf` ([instructions](https://foundry-rs.github.io/starknet-foundry/getting-started/installation.html))
+2. Install Scarb `2.8.4` via `asdf` ([instructions](https://docs.swmansion.com/scarb/download.html#install-via-asdf))
+3. Install Starknet Foundry `0.31.0` via `asdf` ([instructions](https://foundry-rs.github.io/starknet-foundry/getting-started/installation.html))
 4. Install the Cairo 1.0 extension for VSCode ([marketplace](https://foundry-rs.github.io/starknet-foundry/getting-started/installation.html#installation-via-asdf))
 
 ### Option 2: With Docker
@@ -43,7 +43,7 @@ Initialize the project structure within the cloned repository by using the `Scar
 - Create a new Cairo file under the `src` directory named `counter.cairo`, and add the following starting code:
   ```rust
   #[starknet::contract]
-  pub mod counter_contract {
+  pub mod CounterContract {
       #[storage]
       struct Storage {}
   }
@@ -85,7 +85,7 @@ Add `snforge` as a dependency within your `Scarb.toml` file to allow execution o
 
 - In your `Scarb.toml`, declare the `snforge_std` package as your project dependency and enable `casm` contract class generation
 - In your `Scarb.toml`, define a script named `test` to be able to run `snforge test` command
-- In your `Scarb.toml`, set your `edition` to target `2023_01`
+- In your `Scarb.toml`, set your `edition` to target `2023_11`
 
 ### Verification
 
@@ -100,7 +100,7 @@ scarb test
 - Specify the version of Starknet Foundry that the project currently uses
 - Refer to the [Starknet Foundry Documention](https://foundry-rs.github.io/starknet-foundry/getting-started/first-steps.html#using-snforge-with-existing-scarb-projects) for more information.
 - Refer to the [Scarb Running Scripts Documentation](https://docs.swmansion.com/scarb/docs/reference/scripts.html#running-scripts) for more information.
-- `edition = "2024_07"` is a default configuration from Scarb that targets the July 2024 version of Cairo prelude. However, in our workshop we will work with `2023_01` for simplicity. Refer to the [Prelude Documentation](https://book.cairo-lang.org/appendix-04-cairo-prelude.html#prelude) for more information.
+- `edition = "2024_07"` is a default configuration from Scarb that targets the July 2024 version of Cairo prelude. However, in our workshop we will work with `2023_11` for simplicity. Refer to the [Prelude Documentation](https://book.cairo-lang.org/appendix-04-cairo-prelude.html#prelude) for more information.
 
 ## Step 3
 

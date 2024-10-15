@@ -1,6 +1,6 @@
 use super::utils::deploy_contract;
-use workshop::counter::{ICounterDispatcher, ICounterDispatcherTrait, counter_contract};
-use snforge_std::{spy_events, EventSpy, EventSpyAssertionsTrait};
+use workshop::counter::{ICounterDispatcher, ICounterDispatcherTrait, CounterContract};
+use snforge_std::{spy_events, EventSpyAssertionsTrait};
 
 #[test]
 fn test_counter_event() {
@@ -11,11 +11,11 @@ fn test_counter_event() {
     let mut spy = spy_events();
     dispatcher.increase_counter();
 
-    spy.assert_emitted(@array![ 
+    spy.assert_emitted(@array![
         (
             contract_address,
-            counter_contract::Event::CounterIncreased(
-                counter_contract::CounterIncreased { value: 16 }
+            CounterContract::Event::CounterIncreased(
+                CounterContract::CounterIncreased { value: 16 }
             )
         )
     ]);
