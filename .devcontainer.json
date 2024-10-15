@@ -1,6 +1,6 @@
 {
   "name": "dev",
-  "image": "starknetfoundation/starknet-dev:2.8.0",
+  "image": "starknetfoundation/starknet-dev:2.8.4",
   "customizations": {
     "vscode": {
       "extensions": [
